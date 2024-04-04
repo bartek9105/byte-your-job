@@ -1,0 +1,35 @@
+.container {
+  display: grid;
+  row-gap: 12px;
+  background-color: var(--grey-light);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.companyInfo {
+  display: flex;
+  column-gap: 8px;
+}
+
+.companyName,
+.title {
+  color: var(--grey);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.location,
+.type,
+.salary {
+  color: var(--grey);
+  font-size: 11px;
+}
+
+.salary {
+  color: var(--green);
+}
+
+.companyName,
+.title {
+  margin-bottom: 4px;
+}

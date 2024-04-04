@@ -1,0 +1,25 @@
+.container {
+  display: grid;
+  row-gap: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.title {
+  color: var(--grey);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.list {
+  display: flex;
+  column-gap: 16px;
+  align-items: center;
+  overflow-x: scroll;
+  max-width: 100%;
+  padding-bottom: 16px;
+}
+
+.listItem {
+  min-width: 199px;
+}
