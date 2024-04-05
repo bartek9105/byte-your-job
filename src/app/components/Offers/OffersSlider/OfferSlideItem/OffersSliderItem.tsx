@@ -1,6 +1,10 @@
-import Image from "next/image";
 import styles from "./OffersSliderItem.module.scss";
 import { Offer } from "@/app/types/Offer";
+import {
+  formatLocation,
+  formatSalaryRange,
+} from "@/app/utils/formated-data-display";
+import { OfferCompanyLogo } from "../../OfferCompanyLogo/OfferCompanyLogo";
 
 export const OffersSliderItem = ({
   companyName,
@@ -13,23 +17,22 @@ export const OffersSliderItem = ({
   salaryMax,
   currency,
 }: Offer) => {
-  const location = `${city}, ${country}`;
-  const salaryRange = `${salaryMin} - ${salaryMax} ${currency}`;
-
   return (
     <article className={styles.container}>
       <div className={styles.companyInfo}>
-        <Image src={imgUrl} width="36" height="36" alt={companyName} />
+        <OfferCompanyLogo imgUrl={imgUrl} alt={companyName} />
         <div>
           <h3 className={styles.companyName}>{companyName}</h3>
-          <p className={styles.location}>{location}</p>
+          <p className={styles.location}>{formatLocation(city, country)}</p>
         </div>
       </div>
       <div>
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.type}>{type}</p>
       </div>
-      <p className={styles.salary}>{salaryRange}</p>
+      <p className={styles.salary}>
+        {formatSalaryRange(salaryMin, salaryMax, currency)}
+      </p>
     </article>
   );
 };

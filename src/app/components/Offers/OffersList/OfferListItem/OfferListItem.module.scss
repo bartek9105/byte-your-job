@@ -1,0 +1,46 @@
+.container {
+  color: var(--grey);
+  display: grid;
+  row-gap: 12px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 3px 4px 15px var(--shadow-color);
+  border-left: 3px solid var(--pink);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 36px 2fr 1fr;
+  column-gap: 16px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 170px;
+}
+
+.locationAndType {
+  display: flex;
+  column-gap: 12px;
+  font-size: 11px;
+}
+
+.salaryRange {
+  color: var(--green);
+  font-size: 11px;
+}
+
+.createdAt {
+  font-size: 11px;
+  text-align: right;
+}
+
+.titleAndLocation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

@@ -3,4 +3,9 @@
   --grey-light: rgba(226, 232, 240, 0.28);
 
   --green: #0fb600;
+
+  --pink: #ff005c;
+  --pink-light: #fff1f6;
+
+  --shadow-color: rgba(0, 0, 0, 0.04);
 }

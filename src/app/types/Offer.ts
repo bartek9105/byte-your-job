@@ -1,9 +1,3 @@
-interface Salary {
-  min: string;
-  max: string;
-  currency: string;
-}
-
 export interface Offer {
   imgUrl: string;
   city: string;
@@ -14,4 +8,6 @@ export interface Offer {
   salaryMin: string;
   salaryMax: string;
   currency: string;
+  createdAt: string;
+  technologies: string[];
 }

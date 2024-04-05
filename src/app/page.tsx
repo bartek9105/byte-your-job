@@ -1,5 +1,6 @@
 import { getOffers } from "./api/offers/api";
-import { OffersSlider } from "./components/OffersSlider/OffersSlider";
+import { OffersList } from "./components/Offers/OffersList/OffersList";
+import { OffersSlider } from "./components/Offers/OffersSlider/OffersSlider";
 import styles from "./page.module.css";
 
 export default async function Home() {
@@ -9,6 +10,8 @@ export default async function Home() {
     <main className={styles.main}>
       {offers ? <OffersSlider offers={offers} title="Promoted" /> : null}
       {offers ? <OffersSlider offers={offers} title="Most recent" /> : null}
+
+      <OffersList offers={offers} />
     </main>
   );
 }
