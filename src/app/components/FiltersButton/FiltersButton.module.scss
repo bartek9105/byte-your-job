@@ -1,0 +1,15 @@
+.button {
+  font-family: inherit;
+  padding: 8px 10px;
+  color: var(--grey);
+  border: 1px solid var(--grey-lighter);
+  border-radius: 8px;
+  font-size: 12px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.buttonActive {
+  font-weight: 600;
+  border-color: var(--grey);
+}
