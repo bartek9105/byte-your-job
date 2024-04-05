@@ -1,21 +1,6 @@
 import Image from "next/image";
 import styles from "./OffersSliderItem.module.scss";
-
-interface Salary {
-  min: string;
-  max: string;
-  currency: string;
-}
-
-export interface OffersSliderItemProps {
-  imgUrl: string;
-  city: string;
-  country: string;
-  title: string;
-  companyName: string;
-  type: string;
-  salary: Salary;
-}
+import { Offer } from "@/app/types/Offer";
 
 export const OffersSliderItem = ({
   companyName,
@@ -24,10 +9,12 @@ export const OffersSliderItem = ({
   country,
   title,
   type,
-  salary,
-}: OffersSliderItemProps) => {
+  salaryMin,
+  salaryMax,
+  currency,
+}: Offer) => {
   const location = `${city}, ${country}`;
-  const salaryRange = `${salary.min} - ${salary.max} ${salary.currency}`;
+  const salaryRange = `${salaryMin} - ${salaryMax} ${currency}`;
 
   return (
     <article className={styles.container}>

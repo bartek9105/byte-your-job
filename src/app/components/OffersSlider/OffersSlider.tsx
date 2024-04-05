@@ -1,12 +1,10 @@
-import {
-  OffersSliderItem,
-  OffersSliderItemProps,
-} from "./OfferSlideItem/OffersSliderItem";
+import { Offer } from "@/app/types/Offer";
+import { OffersSliderItem } from "./OfferSlideItem/OffersSliderItem";
 
 import styles from "./OffersSlider.module.scss";
 
 interface OffersSliderProps {
-  offers: OffersSliderItemProps[];
+  offers: Offer[];
   title: string;
 }
 
